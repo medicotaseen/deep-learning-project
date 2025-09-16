@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Under Development</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --fg: #e6edf3;
+      --muted: #94a3b8;
+      --accent: #22d3ee;
+    }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid;
+      place-items: center;
+      background: radial-gradient(1200px 600px at 50% 10%, #101836 0%, var(--bg) 55%);
+      color: var(--fg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+    }
+    .wrap {
+      text-align: center;
+      padding: 2.75rem 3.25rem;
+      border: 1px solid rgba(148,163,184,0.18);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(17,25,52,0.6), rgba(8,12,26,0.6));
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px);
+    }
+    .line {
+      font-size: clamp(1.25rem, 3.5vw, 2rem);
+      letter-spacing: 0.02em;
+      margin: 0 0 0.5rem;
+      white-space: nowrap;
+    }
+    .cursor {
+      display: inline-block;
+      width: 0.6ch;
+      margin-left: 2px;
+      background: var(--accent);
+      height: 1.1em;
+      vertical-align: -0.15em;
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    .sub {
+      font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+      color: var(--muted);
+      margin: 0.25rem 0 0;
+    }
+    .dots::after {
+      content: "";
+      animation: dots 1.2s steps(3, end) infinite;
+    }
+    @keyframes dots {
+      0% { content: ""; }
+      33% { content: "."; }
+      66% { content: ".."; }
+      100% { content: "..."; }
+    }
+    .hint {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #7aa2c7;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="status" aria-live="polite">
+    <h1 class="line">
+      This page is under development<span class="cursor" aria-hidden="true"></span>
+    </h1>
+    <p class="sub">Deploying updates<span class="dots" aria-hidden="true"></span></p>
+    <div class="hint">Press Ctrl/Cmd + R to refresh later</div>
+  </div>
+
+  <script>
+    // Optional: type-in effect for the headline
+    const text = "This page is under development";
+    const line = document.querySelector(".line");
+    const cursor = document.querySelector(".cursor");
+
+    // Keep original structure but clear the text node before typing
+    line.childNodes[0].nodeValue = "";
+
+    let i = 0;
+    const speed = 40; // ms per char
+    function type() {
+      if (i <= text.length) {
+        line.childNodes[0].nodeValue = text.slice(0, i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        cursor.style.opacity = "1";
+      }
+    }
+    // Small delay for a smoother entrance
+    setTimeout(type, 300);
+  </script>
+</body>
+</html>
