@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedicoTaseen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CSS-only tabs (radios) -->
+  <div class="tabs">
+    <input type="radio" name="tab" id="t-blog" checked>
+    <input type="radio" name="tab" id="t-projects">
+    <input type="radio" name="tab" id="t-cases">
+    <input type="radio" name="tab" id="t-about">
+  </div>
+
+  <header>
+    <!-- Hamburger (top-left) -->
+    <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+
+    <div class="brand" aria-label="Site">Medicotaseen</div>
+
+    <nav class="dock" aria-label="Sections">
+      <button class="pill" id="aboutBtn">About</button>
+
+      <!-- Theme toggle pill -->
+      <div class="theme-toggle">
+        <button id="themeToggle" class="pill toggle-pill" aria-pressed="false">
+          <!-- Sun (light) -->
+          <svg class="icon sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2M5 5l-1.5-1.5M20.5 20.5 19 19M19 5l1.5-1.5M4.5 19.5 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="toggle-label">Light</span>
+          <!-- Moon (dark) -->
+          <svg class="icon moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile / Hamburger menu overlay -->
+  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <div class="menu-inner">
+      <nav aria-label="Mobile Sections">
+        <a class="menu-link" href="#" data-target="t-projects">Projects(Unavailable)</a>
+        <a class="menu-link" href="#" data-target="t-cases">Case Diaries(Unavailable)</a>
+        <a class="menu-link" href="#" data-action="about">About</a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- About modal (central) -->
+  <aside id="aboutModal" class="about-modal" aria-hidden="true">
+    <div class="about-card" role="dialog" aria-labelledby="aboutTitle">
+      <button class="about-close" aria-label="Close about">×</button>
+      <div class="about-top">
+        <img class="about-photo" src="assets/genitalium.png" alt="Mycoplasma genitalium">
+        <div class="about-meta">
+          <div id="aboutTitle" class="about-name">Shaikh Taseen</div>
+          <div class="about-role">NEET Aspirant</div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>I am a student focusing on medical research. I publish notes and projects here to help others learn and maybe collaborate in future.</p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js" defer></script>
+
+  <main class="content" aria-label="Main content">
+    <section class="articles">
+      <article class="card">
+        <a href="post1.html"><img class="home-card-img" src="assets/genitalium.png" alt="Mycoplasma"></a>
+        <div class="card-body">
+          <h3>Bare‑Minimum Biology</h3>
+          <p>Mycoplasma genitalium and the smallest free‑living genome</p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>

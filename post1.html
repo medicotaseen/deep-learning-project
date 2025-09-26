@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bare Minimum Biology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-back">
+
+  <!-- Radios for consistency (hidden) -->
+  <div class="tabs">
+    <input type="radio" name="tab" id="t-blog">
+    <input type="radio" name="tab" id="t-projects">
+    <input type="radio" name="tab" id="t-cases">
+    <input type="radio" name="tab" id="t-about">
+  </div>
+
+  <header>
+    <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+
+    <div class="brand" aria-label="Site">Medicotaseen</div>
+
+    <nav class="dock" aria-label="Sections">
+      <a class="pill" href="index.html">Home</a>
+      <button class="pill" id="aboutBtn">About</button>
+
+      <div class="theme-toggle">
+        <button id="themeToggle" class="pill toggle-pill" aria-pressed="false">
+          <svg class="icon sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2M5 5l-1.5-1.5M20.5 20.5 19 19M19 5l1.5-1.5M4.5 19.5 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="toggle-label">Light</span>
+          <svg class="icon moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile menu -->
+  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <div class="menu-inner">
+      <nav aria-label="Mobile Sections">
+        <a class="menu-link" href="index.html">Home</a>
+        <a class="menu-link" href="#" data-target="t-projects">Projects(Unavailable)</a>
+        <a class="menu-link" href="#" data-target="t-cases">Case Diaries(Unavailable)</a>
+        <a class="menu-link" href="#" data-action="about">About</a>
+      </nav>
+    </div>
+  </aside>
+
+  <script src="script.js" defer></script>
+
+  <!-- Back button (below header) -->
+  <div class="back-wrap"><a class="back-button" href="index.html">← Back</a></div>
+
+  <!-- About modal (central) -->
+  <aside id="aboutModal" class="about-modal" aria-hidden="true">
+    <div class="about-card" role="dialog" aria-labelledby="aboutTitle">
+      <button class="about-close" aria-label="Close about">×</button>
+      <div class="about-top">
+        <img class="about-photo" src="assets/genitalium.png" alt="Mycoplasma genitalium">
+        <div class="about-meta">
+          <div id="aboutTitle" class="about-name">Shaikh Taseen</div>
+          <div class="about-role">NEET Aspirant</div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>I am a student focusing on medical research. I publish notes and projects here to help others learn and maybe collaborate in future.</p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="article-page content">
+    <article class="post card">
+      <div class="article-heading"><h1>Bare‑Minimum Biology — Mycoplasma genitalium, the smallest free‑living genome</h1></div>
+      <img class="card-img" src="assets/genitalium.png" alt="Microscopic view of Mycoplasma genitalium">
+      <div class="card-body">
+        <h2>Overview</h2>
+        <p>Mycoplasma genitalium is a small, wall-less bacterium and is constructed on one of the smallest known genomes among the free-living microbes approximately 580 kilobases but it can effectively colonise the urogenital tract and is transmitted during sexual contact. Its single stranded DNA encodes a specialised tip organelle to attach its self to epithelial cells assisting it to continue with minimal parts and less metabolic baggage. In men, it is clinically associated with non-gonococcal urethritis and in women, cervicitis and inflammatory disease of the pelvis, with few or no symptoms. Diagnosis is based on nucleic-acid tests and the treatment is made complex by increasing resistance to antibiotics. This simple organism demonstrates the minimum one would expect biology to operate--and the extent of the effects that a relatively small genome can have on sexual and reproductive health.</p>
+        <h2>Taxonomy and Biology</h2>
+        <p>M. genitalium is a Mollicute family Mycoplasmataceae. This group is characterised by the absence of peptidoglycan cell wall and a parasitic association with mucosal surfaces of the host. This is due to the fact that a lack of a cell wall allows it to be intrinsically resistant to beta-lactam antibiotics and contributes to its distinctive microbiology and treatment choices.</p>
+        <h2>Genome and Unique Features</h2>
+        <p>The genome of M. genitalium is among the smallest of self-replicating and free-living microbes at approximately 580 kb. It became the first bacterial genome to be chemically synthesised and is important in minimal cell studies. It is assisted by a distinct terminal organelle that aids it to stick and slide on surfaces. This organelle uses surface proteins (MgpB/MgpC) that modify their structure, and with the help of which the bacterium evades the immune system and exists within the host.</p>
+        <h2>Infection and Clinical Significance</h2>
+        <p>Sexual contact is the main way of transmission. The STIs (Trichomonas vaginalis, Neisseria gonorrhoeae, and Chlamydia trachomatis) are co-infected frequently in clinical cases. Numerous infections are asymptomatic and therefore can be transmitted silently. Epidemiological research studies have observed that M. genitalium is a significant cause of male urethritis and female cervicitis in various populations. <br> M. genitalium often causes non-chlamydial, non-gonococcal urethritis in men resulting in urethritis symptoms such as painful urination, urethral discharge. Urethritis may persist or recur in case of inappropriate treatment of the infection. It is linked to mucopurulent cervicitis and may develop into pelvic inflammatory disease in women which leads to pain in the pelvis, pain during sexual activity, and abnormal bleeding or discharge.</p>
+        <h2>Diagnosis and Treatment</h2>
+        <p>The bacteria is slow and impractical to culture. Thus, nucleic acid amplification tests (NAATs/PCR) are the normative of M. genitalium diagnosis. The tests would also be used to determine resistance markers of macrolides and fluoroquinolones to assist in treatment. In the presence of persistent or recurrent urethritis, cervicitis and inflammatory pelvic disease, testing is of significant importance in the event that the usual causes are excluded or in the possibility of co-infection. <br> M. genitalium exhibits a growing trend in the global resistance to macrolides, and increasing resistance to fluoroquinolones which complicates empirical treatment. This tendency emphasises the importance of resistance-based regimens as much as possible. The existing recommendations indicate that staged or resistance-informed treatment plans should be used to increase cure rates and reduce the development of subsequent resistance, with alternative treatment options used in cases where initial treatment fails.</p>
+        <h2>Immunopathogenesis</h2>
+        <p>Cytokines and neutrophil recruitment are initiated by local infection. Simultaneously, the alterations in adhesins contribute to the immune response evasion, as well as perpetuating of chronic infection in the urogenital mucosa by the bacterium. Combined with its small genome and environmental adaptation, these characteristics enable it to remain within the human body despite the defences and occasional antibiotic treatment.</p>
+      </div>
+    </article>
+  </main>
+
+</body>
+</html>
