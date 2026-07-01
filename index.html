@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicotaseen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The menu and about modal are controlled by hidden checkboxes, so the UI stays JavaScript-free. -->
+  <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Toggle navigation menu">
+  <input type="checkbox" id="aboutToggle" class="about-toggle" aria-label="Toggle about modal">
+
+  <header class="site-header">
+    <!-- The hamburger label is the visual trigger for the menu. Placed inside header for consistent layout. -->
+    <label class="hamburger" for="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </label>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a class="brand" href="index.html" aria-label="Medicotaseen home">Medicotaseen</a>
+
+    <nav class="dock" aria-label="Primary navigation">
+      <a class="pill" href="index.html">Home</a>
+      <label class="pill about-trigger" for="aboutToggle">About</label>
+
+      <div class="theme-toggle">
+        <button id="themeToggle" class="pill toggle-pill" type="button" aria-pressed="false">
+          <svg class="icon sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2M5 5l-1.5-1.5M20.5 20.5 19 19M19 5l1.5-1.5M4.5 19.5 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="toggle-label">Light</span>
+          <svg class="icon moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Full-screen glass overlay for the mobile navigation. -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-labelledby="mobileMenuTitle">
+    <div class="menu-panel">
+      <div class="menu-head">
+        <h2 id="mobileMenuTitle">Explore</h2>
+        <label class="menu-close" for="menuToggle" aria-label="Close menu">×</label>
+      </div>
+
+      <nav class="menu-links" aria-label="Mobile navigation">
+        <a class="menu-link" href="index.html">Home</a>
+        <a class="menu-link" href="post1.html">Latest article</a>
+        <label class="menu-link menu-link--button" for="aboutToggle">About</label>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Centered about card with a glassy backdrop. -->
+  <div class="about-modal" id="aboutModal" role="dialog" aria-labelledby="aboutTitle">
+    <div class="about-card">
+      <label class="about-close" for="aboutToggle" aria-label="Close about">&times</label>
+      <div class="about-top">
+        <img class="about-photo" src="https://i.ibb.co/qMP6yy19/genitalium.png" alt="Mycoplasma genitalium">
+        <div class="about-meta">
+          <div id="aboutTitle" class="about-name">Shaikh Taseen</div>
+          <div class="about-role">NEET Aspirant</div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>I am a student focused on medical research. I publish notes and projects here to help others study with clarity and maybe collaborate in future.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+
+  <main class="content" aria-label="Main content">
+    <section class="hero">
+      <p class="eyebrow">Medical research notes</p>
+      <h1>Carefully structured thoughts for biology, pathology, and study.</h1>
+      <p class="hero-copy">A calm, minimal home for papers, experiments, and notes that deserve a clearer reading experience.</p>
+    </section>
+
+    <section class="articles" aria-label="Published articles">
+      <article class="card">
+        <a href="post1.html"><img class="home-card-img" src="https://i.ibb.co/qMP6yy19/genitalium.png" alt="Mycoplasma genitalium"></a>
+        <div class="card-body">
+          <h3>Bare‑Minimum Biology</h3>
+          <p>Mycoplasma genitalium and the smallest free‑living genome.</p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
+
+
